@@ -10,9 +10,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cors());
-
-//deneme amaclı fakestoreapi.com dan product listesi çekme
 app.get("/", async (req, res) => {
+res.send("Başlangıç sayfasındasın")
+})
+//deneme amaclı fakestoreapi.com dan product listesi çekme
+app.get("/api/fakelist", async (req, res) => {
   const fkdata = [];
 
   const options = {
